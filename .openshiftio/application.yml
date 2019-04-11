@@ -32,17 +32,7 @@ parameters:
   value: target
   required: false
 objects:
-- apiVersion: v1
-  kind: ConfigMap
-  metadata:
-    labels:
-      app: wildfly-configmap
-      group: io.openshift
-    name: app-config
-  data:
-    app-config.yml: |-
-      greeting:
-        message: Hello %s from a ConfigMap!
+
 - apiVersion: v1
   kind: ImageStream
   metadata:
@@ -140,8 +130,8 @@ objects:
           - configMap:
               name: app-config
               items:
-              - key: "app-config.yml"
-                path: "greeting-configuration.yml"
+              - key: "message"
+                path: "greeting.message"
             name: config
         containers:
         - env:
