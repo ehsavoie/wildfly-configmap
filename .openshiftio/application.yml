@@ -172,7 +172,7 @@ objects:
             privileged: false
           volumeMounts:
               - name: config
-                mountPath: /wildfly/standalone/data/configmap/config
+                mountPath: /app/config
     triggers:
     - type: ConfigChange
     - type: ImageChange
