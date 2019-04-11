@@ -142,7 +142,7 @@ objects:
               items:
               - key: "app-config.yml"
                 path: "greeting-configuration.yml"
-                name: config
+            name: config
         containers:
         - env:
           - name: KUBERNETES_NAMESPACE
@@ -172,7 +172,7 @@ objects:
             privileged: false
           volumeMounts:
               - name: config
-                mountPath: /wildfly/standalone/data/config
+                mountPath: /wildfly/standalone/data/configmap/config
     triggers:
     - type: ConfigChange
     - type: ImageChange

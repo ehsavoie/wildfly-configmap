@@ -404,7 +404,7 @@
         </subsystem>
         <subsystem xmlns="urn:wildfly:microprofile-config-smallrye:1.0">
             <config-source name="app-config">
-                <dir path="config" relative-to="jboss.server.data.dir"/>
+                <dir path="configmap/config" relative-to="jboss.server.data.dir"/>
             </config-source>
         </subsystem>
         <subsystem xmlns="urn:wildfly:microprofile-health-smallrye:1.0" security-enabled="false"/>
